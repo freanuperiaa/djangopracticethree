@@ -33,7 +33,7 @@ def add_post(request):
         'form' : form,
     }
     return render(request,'addpost.html', context)
-
+#problem starts here!!
 class PostUpdateView(UpdateView):
     model = Post
     template = 'post_edit.html'
@@ -42,3 +42,5 @@ class PostUpdateView(UpdateView):
         'category',
         'content',
     ]
+#Up to here! it's with the UpdateView, i should find other ways to
+#use the UpdateView CBV, or actually understand it lol
