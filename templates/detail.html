@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2> {{ item.title }} </h2>
+    <h3> {{item.pub_date}} </h3>
+    <h3> {{ item.category }} </h3>
+    <br><br>
+    <p> {{ item.content }} </p>
+    <a href="{% url 'edit' item.id %}">Click here to edit...</a>
+    <br><br><br>
+    <a href="{% url 'home' %}">Go back...</a>
+{% endblock content %}
